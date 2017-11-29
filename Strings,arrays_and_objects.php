@@ -36,14 +36,20 @@ foreach ($continents as $continent => $animals)
 {
     foreach ($animals as $animal)
    {
-        $arr_two[] = "$animal";
+        $arr_two[] = $animal;
+       foreach ($arr_two as $item){
+           $result = explode(' ', $item);
+           $r_1[] = $result[0];
+           $r_2[] = $result[1];
 
        }
+     }
+
     }
 
        echo '<pre>';
-       var_dump($arr_two);
-      // var_dump($result);
+       //var_dump($arr_two);
+      //var_dump($r_2);
 
 
 
