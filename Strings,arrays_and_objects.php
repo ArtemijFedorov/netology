@@ -1,36 +1,3 @@
-<?php
-$continents = [
-    "Africa" => [
-        "Camelus",
-        "Ceratotherium simum"],
-
-    'Europa' => [
-        'Capra ibex',
-        'Ursus arctos'],
-
-    'Asia' => [
-        'Ailuropoda melanoleuca',
-        'Hippotigris'],
-
-    'South Pole' => [
-        'White Bear',
-        'Aptenodytes forsteri'],
-
-
-    'South America' => [
-        'Panthera onca',
-        'Crocodilia'],
-
-    'North America' => [
-        'Grizzly bear',
-        'Heloderma suspectum'],
-
-    'Australia' => [
-        'Kenkguru',
-        'Canis dingo']
-
-];
-
 $name_two_words = [];
 foreach($continents as $continent => $animals){
     foreach($animals as $animal){
@@ -48,12 +15,20 @@ foreach($continents as $continent => $animals){
     }
 }
 
+echo '<pre>';
+//var_dump($name_two_words);
+echo '<pre>';
 
 foreach($name_two_words as $name){
     $parts = explode(' ', $name);
     $first[] = $parts[0];
     $second[] = $parts[1];
 }
+
+echo '<pre>';
+//var_dump($first);
+//var_dump($second);
+echo '<pre>';
 
 $random_first_word = [];
 
@@ -64,27 +39,27 @@ while (count($random_first_word) < count($name_two_words)){
     }
 }
 
-
+//var_dump($random_first_word);
 
 $random_second_word = [];
 
 while (count($random_second_word) < count($name_two_words)){
     $proverka = $second[rand(0, count($name_two_words)-1)];
     if (!in_array($proverka, $random_second_word)) {
-         $random_second_word[] = $proverka;
+       $random_second_word[] = $proverka;
     }
 }
 
-
-
+//var_dump($random_second_word );
+shuffle($random_second_word);
+shuffle($random_first_word);
 $final_result = [];
 
-for($i = 0; $i < count($name_two_words); $i++){
+for ($i = 0, $j = count($random_first_word); $i < $j; $i++){
     $final_result[]= $random_first_word[$i] . ' ' . $random_second_word[$i];
 }
-echo '<pre>';
-var_dump($final_result);
 
+var_dump($final_result);
 
 
 
