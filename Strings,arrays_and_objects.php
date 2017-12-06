@@ -60,7 +60,7 @@ $random_first_word = [];
 while (count($random_first_word) < count($name_two_words)){
     $proverka = $first[rand(0, count($name_two_words)-1)];
     if (!in_array($proverka, $random_first_word)) {
-        array_push($random_first_word, $proverka);
+        $random_first_word[] = $proverka;
     }
 }
 
@@ -71,7 +71,7 @@ $random_second_word = [];
 while (count($random_second_word) < count($name_two_words)){
     $proverka = $second[rand(0, count($name_two_words)-1)];
     if (!in_array($proverka, $random_second_word)) {
-        array_push($random_second_word, $proverka);
+         $random_second_word[] = $proverka;
     }
 }
 
