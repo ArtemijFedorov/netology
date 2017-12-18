@@ -5,7 +5,7 @@
   $usersecondName = "Фёдоров";
   $userAge = "26 лет";
   $userMail = "original_ti@mail.ru";
-  $userProf = "Сиситемный администратор";
+  $userProf = "Сетевой инженер";
 
  ?>
 
