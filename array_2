@@ -43,8 +43,13 @@ foreach($continents as $continent => $animals) {
 echo '<pre>';
 var_dump($two_animals);
 
-$first_name = array_map(function ($a){return explode(' ', $a)[0];}, $two_animals);
-$second_name = array_map(function ($a){return explode(' ', $a)[1];}, $two_animals);
+foreach($two_animals as $two_word) {
+    $word = explode(' ', $two_word);
+    $first_name[] = $word[0];
+    $second_name[] = $word[1];
+}
+//$first_name = array_map(function ($a){return explode(' ', $a)[0];}, $two_animals);
+//$second_name = array_map(function ($a){return explode(' ', $a)[1];}, $two_animals);
 
 shuffle($first_name);
 shuffle($second_name);
