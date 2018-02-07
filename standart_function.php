@@ -1,6 +1,10 @@
 <div class="slide-result">
     <?php
-    $json = file_get_contents('http://api.openweathermap.org/data/2.5/weather?id=529334&lang=ru&units=metric&APPID=20113cf214aeddf376ff03e5dde39062');
+    $key = '20113cf214aeddf376ff03e5dde39062';
+    $city_id = '529334';
+    $lang ='ru';
+    $units = 'metric';
+    $json = file_get_contents('http://api.openweathermap.org/data/2.5/weather?'."id=$city_id&lang=$lang&units=$units&APPID=$key");
     $data = json_decode($json, true);
     $opisanie = $data['weather'][0]['description'];
     $gorod = $data['name'];
