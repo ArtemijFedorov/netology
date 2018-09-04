@@ -1,8 +1,8 @@
 <?php
 $continents = [
-    "Africa" => [
-        "Camelus",
-        "Ceratotherium simum"],
+    'Africa' => [
+        'Camelus',
+        'Ceratotherium simum'],
 
     'Europa' => [
         'Capra lucum ibex',
@@ -60,8 +60,8 @@ shuffle($second_name);
 
 $curise_name = [];
 for ($i = 0; $i < count($two_animals); $i++){
-    $curise_name[] = $first_name[$i]. " ".$second_name[$i];
+    $curise_name[] = $first_name[$i]. ' '.$second_name[$i];
 }
 
 echo '<pre>';
-var_dump($curise_name);
+print_r($curise_name);
